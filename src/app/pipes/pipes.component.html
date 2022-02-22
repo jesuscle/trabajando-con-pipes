@@ -1,0 +1,29 @@
+<h1>Ejemplos sobre tuberías</h1>
+<h2>Trabajando con cadenas</h2>
+<p>{{informacion}}</p>
+<p>{{informacion | uppercase}}</p>
+<p>{{informacion | lowercase}}</p>
+<p>{{informacion | slice:0:4}}</p>
+<h2>Trabajando con arrays</h2>
+<p>{{numeros}}</p>
+<p>{{numeros | slice:2:3}}</p>
+<h2>Trabajando con bucles</h2>
+<div>
+  <label for="limite">Tamaño de la lista</label>
+  <input #tamano type="number" name="" id="limite" (change)="cambiarTamano(tamano.value)">
+</div>
+<ul>
+  <li *ngFor="let numero of numeros|slice:0:limite; let i= index;">{{numero}}</li>
+</ul>
+<h2>Trabajando con fechas</h2>
+<p>{{fecha}}</p>
+<p>{{fecha | date}}</p>
+<p>{{fecha | date: 'shortDate'}}</p>
+<p>{{fecha | date: 'fullDate'}}</p>
+<p>{{fecha | date: 'dd-MMMM-yyyy':'+1':'es-ES'}}</p>
+<p>{{fecha | date: 'shortTime'}}</p>
+<p>{{fecha | date: 'full':'+0200':'es'}}</p>
+<h2>Trabajando con números</h2>
+<p>{{numero}}</p>
+<p>{{numero | number}}</p>
+<p>{{numero | number:'3.1-5'}}</p>
